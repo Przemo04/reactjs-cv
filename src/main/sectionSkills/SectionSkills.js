@@ -19,9 +19,33 @@ class SectionSkills extends React.Component{
 		});
 	}
 
-	onClick(event){
+	onClickLow(buttonId, event){
 		event.preventDefault();
-		return false;
+		const filteredArray = this.state.skills.filter(item => item.level == buttonId);
+		this.setState({
+			skills: filteredArray
+		});
+	}
+	onClickBasic(buttonId, event){
+		event.preventDefault();
+		const filteredArray = this.state.skills.filter(item => item.level == buttonId);
+		this.setState({
+			skills: filteredArray
+		});
+	}
+	onClickMedium(buttonId, event){
+		event.preventDefault();
+		const filteredArray = this.state.skills.filter(item => item.level == buttonId);
+		this.setState({
+			skills: filteredArray
+		});
+	}
+	onClickHigh(buttonId, event){
+		event.preventDefault();
+		const filteredArray = this.state.skills.filter(item => item.level == buttonId);
+		this.setState({
+			skills: filteredArray
+		});
 	}
 	render(){
 
@@ -31,10 +55,10 @@ class SectionSkills extends React.Component{
 				<h5>Legenda poziomu znajomości technologii i narzędzi*</h5>
 					<ul className="Legend-Skills">
 						<li>podstawowa</li>
-						<li><div className="Low"><button onClick={this.onClick.bind(this)}>Click</button></div></li>
-						<li><div className="Basic"></div></li>
-						<li><div className="Medium"></div></li>
-						<li><div className="High"></div></li>
+						<li><div onClick={this.onClickLow.bind(this, 1)} className="Low"></div></li>
+						<li><div onClick={this.onClickBasic.bind(this, 2)}className="Basic"></div></li>
+						<li><div onClick={this.onClickMedium.bind(this, 3)}className="Medium"></div></li>
+						<li><div onClick={this.onClickHigh.bind(this, 4)}className="High"></div></li>
 						<li>zaawansowana</li>
 					</ul>
 
