@@ -13,10 +13,10 @@ class App extends Component {
 
 				<Grid fluid>
 					<Row>
-						<Col xs={12} sm={3} md={3} lg={3} >
+						<Col xs={12} sm={12} md={3} lg={3} >
 							<Sidebar />
 						</Col>
-						<Col xs={12} sm={9} md={9} lg={9} >
+						<Col xs={12} sm={12} md={9} lg={9} >
 							<Main />
 						</Col>
 					</Row>

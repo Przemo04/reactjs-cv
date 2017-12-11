@@ -18,6 +18,11 @@ class SectionSkills extends React.Component{
 			skills
 		});
 	}
+	componentWillMount(buttonId){
+		this.setState({
+			skills
+		});
+	}
 
 	onClickLow(buttonId, event){
 		event.preventDefault();
@@ -26,6 +31,7 @@ class SectionSkills extends React.Component{
 			skills: filteredArray
 		});
 	}
+	
 	onClickBasic(buttonId, event){
 		event.preventDefault();
 		const filteredArray = this.state.skills.filter(item => item.level == buttonId);
