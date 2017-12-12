@@ -5,19 +5,16 @@ import HeadSection from "../../common/headSection/HeadSection.js";
 import Skill from "./Skill/Skill.js";
 import skills from "../../data/skills.json";
 
-import ReactDOM from "react-dom";
 class SectionSkills extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { skills, level: "Low" };
+    this.state = { skills, buttonId: 2 };
   }
 
-  onClickChooseLevel(level, buttonId, event) {
+  onClickChooseLevel(buttonId, event) {
     event.preventDefault();
-    const currentLevel = this.state.level;
-
     this.setState({
-      level
+      buttonId
     });
   }
 
@@ -27,28 +24,28 @@ class SectionSkills extends React.Component {
         <HeadSection name="Umiejętności" />
         <h5>Legenda poziomu znajomości technologii i narzędzi*</h5>
         <ul className="Legend-Skills">
-          <li>podstawowas</li>
+          <li>podstawowa</li>
           <li>
             <div
-              onClick={this.onClickChooseLevel.bind(this, "Low", 1)}
+              onClick={this.onClickChooseLevel.bind(this, 1)}
               className="Low"
             />
           </li>
           <li>
             <div
-              onClick={this.onClickChooseLevel.bind(this, "Basic", 2)}
+              onClick={this.onClickChooseLevel.bind(this, 2)}
               className="Basic"
             />
           </li>
           <li>
             <div
-              onClick={this.onClickChooseLevel.bind(this, "Medium", 3)}
+              onClick={this.onClickChooseLevel.bind(this, 3)}
               className="Medium"
             />
           </li>
           <li>
             <div
-              onClick={this.onClickChooseLevel.bind(this, "High", 4)}
+              onClick={this.onClickChooseLevel.bind(this, 4)}
               className="High"
             />
           </li>
@@ -56,23 +53,21 @@ class SectionSkills extends React.Component {
         </ul>
 
         <div className="SkillWrapper">
-          {this.state.skills.map(item => {
-            let classLevel;
-            if (item.level == 1) {
-              classLevel = "Low";
-            } else if (item.level == 2) {
-              classLevel = "Basic";
-            } else if (item.level == 3) {
-              classLevel = "Medium";
-            } else {
-              classLevel = "High";
-            }
-            if (classLevel == this.state.level) {
-              return (
-                <Skill key={item.id} level={classLevel} name={item.name} />
-              );
-            }
-          })}
+          {this.state.skills
+            .filter(skill => skill.level == this.state.buttonId)
+            .map(skill => {
+              let classLevel;
+              if (skill.level == 1) {
+                classLevel = "Low";
+              } else if (skill.level == 2) {
+                classLevel = "Basic";
+              } else if (skill.level == 3) {
+                classLevel = "Medium";
+              } else {
+                classLevel = "High";
+              }
+              return <Skill key={skill.id} level={classLevel} name={skill.name} />;
+            })}
         </div>
         <p className="Star">* - Jest to subiektywna ocena umiejętności</p>
       </div>

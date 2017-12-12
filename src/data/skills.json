@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "JavaScript (ES6)",
-    "level": "2"
+    "level": "1"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
   {
     "id": 6,
     "name": "Jira",
-    "level": "3"
+    "level": "2"
   },
   {
     "id": 7,
@@ -52,7 +52,7 @@
   {
     "id": 11,
     "name": "React",
-    "level": "2"
+    "level": "1"
   },
   {
     "id": 12,
@@ -62,12 +62,12 @@
   {
     "id": 13,
     "name": "Python/Django",
-    "level": "2"
+    "level": "1"
   },
   {
     "id": 14,
     "name": "REST",
-    "level": "2"
+    "level": "1"
   },
   {
     "id": 15,
@@ -82,12 +82,12 @@
   {
     "id": 17,
     "name": "SCRUM",
-    "level": "2"
+    "level": "1"
   },
   {
     "id": 18,
     "name": "SEO",
-    "level": "1"
+    "level": "4"
   },
   {
     "id": 19,
@@ -99,5 +99,4 @@
     "name": "FlexBox",
     "level": "2"
   }
-
 ]
