@@ -17,8 +17,7 @@ class SectionSkills extends React.Component {
     const currentLevel = this.state.level;
 
     this.setState({
-      skills: skills,
-      level: level
+      level
     });
   }
 
@@ -28,7 +27,7 @@ class SectionSkills extends React.Component {
         <HeadSection name="Umiejętności" />
         <h5>Legenda poziomu znajomości technologii i narzędzi*</h5>
         <ul className="Legend-Skills">
-          <li>podstawowa</li>
+          <li>podstawowas</li>
           <li>
             <div
               onClick={this.onClickChooseLevel.bind(this, "Low", 1)}
