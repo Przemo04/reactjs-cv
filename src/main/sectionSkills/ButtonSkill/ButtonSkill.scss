@@ -1,0 +1,21 @@
+.ButtonSkill{
+
+	display: inline-block;
+
+	.Low {
+		background: #cff4f9;
+	}
+	.Basic {
+		background: #76bfcc;
+	}
+	.Medium {
+		background: #3a8a99;
+	}
+	.High {
+		background: #1a6572;
+	}
+
+	.Active {
+		border: 1px solid blue;
+	}
+}

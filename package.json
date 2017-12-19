@@ -48,6 +48,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "gh-pages": "^1.1.0",

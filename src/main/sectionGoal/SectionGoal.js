@@ -1,7 +1,6 @@
 import React from "react";
 import logoReact from "../../images/logo.svg";
 import "./SectionGoal.scss";
-import HeadSection from "../../common/headSection/HeadSection.js";
 
 class SectionGoal extends React.Component {
   render() {
