@@ -21,19 +21,20 @@ class SectionSkills extends React.Component {
   }
 
   onClickChooseLevel(id) {
-    console.log("this.state.buttons:" + this.state.buttons);
-    if (this.state.buttons[id]) {
-      this.setState({
-        skills: this.state.skills.filter(
-          skill => parseInt(skill.level, 10) !== id
-        )
-      });
-    }
+    console.log("this.state.buttons:", this.state.buttons);
+
+    const setButtons = {
+      ...this.state.buttons,
+      [id]: !this.state.buttons[id]
+    };
+
+    const setSkill = skills.filter(skill => {
+      return setButtons[skill.level];
+    });
+
     this.setState({
-      buttons: {
-        ...this.state.buttons,
-        [id]: !this.state.buttons[id]
-      }
+      buttons: setButtons,
+      skills: setSkill
       //skills: filteredArray
     });
   }
@@ -42,7 +43,7 @@ class SectionSkills extends React.Component {
     return (
       <div className="SectionSkills">
         <HeadSection name="Umiejętności" />
-        <h5>Legenda poziomu znajomości technologii i narzędzi*</h5>
+        <h5>Legenda poziomu znajomości stechnologii i narzędzi*</h5>
         <ButtonSkill
           name="niska"
           buttonClass="Low"

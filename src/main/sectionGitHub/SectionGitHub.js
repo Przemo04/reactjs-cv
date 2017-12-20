@@ -7,14 +7,17 @@ class SectionGitHub extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      repo: []
+      repo: [],
+      isLoading: "Loading repository.."
     };
   }
 
   componentDidMount() {
     fetch(urlGitHub)
       .then(response => response.json())
-      .then(data => this.setState({ repo: data }))
+      .then(data =>
+        this.setState({ repo: data, isLoading: "Success Load data from github" })
+      )
       .catch(err => {
         console.log("Error happened during fetching!", err);
       });
@@ -22,14 +25,18 @@ class SectionGitHub extends React.Component {
 
   render() {
     const { repo } = this.state;
+
     return (
       <div>
         <h1>Lista repozytrium GitHub</h1>
+        <h6>{this.state.isLoading}</h6>
+				<div className="linkRepo">
         {repo.map(project => (
           <div key={project.id}>
             <a href={project.url}>{project.name}</a>
           </div>
         ))}
+				</div>
       </div>
     );
   }

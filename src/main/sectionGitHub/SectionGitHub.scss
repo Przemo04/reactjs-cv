@@ -1,0 +1,13 @@
+.linkRepo {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	div {
+		margin: 10px 40px;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+
+	}
+}
