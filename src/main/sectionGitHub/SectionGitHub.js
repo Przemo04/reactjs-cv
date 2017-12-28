@@ -25,7 +25,7 @@ class SectionGitHub extends React.Component {
 
   render() {
     const { repo } = this.state;
-
+		
     return (
       <div>
         <h1>Lista repozytrium GitHub</h1>
