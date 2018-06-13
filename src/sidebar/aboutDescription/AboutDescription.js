@@ -21,12 +21,9 @@ class AboutDescription extends React.Component{
 
 	getMoreTextDiv() {
 			if (this.state.expanded) {
-				return <div> <p>Właśnie w tym roku (2017) zostałem absolwentem studiów informatycznych na UwB. Ten kierunek studiów wybrałem nie bez powodu, ponieważ od 16 roku życia nie rozstaje się
+				return <div> <p>W roku (2017) zostałem absolwentem studiów informatycznych na UwB. Ten kierunek studiów wybrałem nie bez powodu, ponieważ od około 16 roku życia nie rozstaje się
 	z komuterem odkrywając wciąż nowe możliwości i technologie, które oferuje nam ta dziedzina. Gdy budowałem pierwsze strony internetowe jeszcze w czasach, gdy wykorzystywano
 do tego tabelki, wiedziałem już, że technologie internetowe to będzie coś co chcę w życiu robić. Nieustający szybki rozwój technologii jeszcze bardziej inspiruje i zachęca do działania.
-Do tej pory udało mi się poznać bardzo wiele języków, narzędzi, sposóbow do budowania aplikacji i serwisów internetowych. Nie jestem ekspertem z żadnej dziedzin programowania, jednak
-przez swoja "karierę" udało mi się poznać bardzo wiele różnorodnych technologii oraz rozwiazań. Dzięki temu, dziś potrafie odpowiedzieć na takie pytania jak: W jakim jęzku chciałbym
-się rozwijać. JavaScript to wybór na który postawiłem stosunkowo dość niedawno, wybór z którego czerpię dużo satysfakcji i motywacji !
 </p>
 <p>
 Na codzień jestem energiczną osobą. Każdy swój dzień staram się dokładnie planować i przez wiele lat wypracowałem metody organizacji i samodyscypliny, które są skuteczne i efektywne. Zaplanowane zadania wykonuję
